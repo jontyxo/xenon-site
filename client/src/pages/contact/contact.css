@@ -1,0 +1,26 @@
+.contactUs{
+    height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background:  url(https://res.cloudinary.com/jonty-mern/image/upload/v1668012043/xenon/goautocity-51color-1024x576_ayys4j.jpg);
+    background-size: cover;
+
+}
+
+.contactform{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.contactHeader{
+    font-family: "Lora", serif;
+    font-size: 45px;
+    color: white;
+}
+
+.labelcontact{
+    color: white;
+    margin:auto
+}

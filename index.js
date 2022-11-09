@@ -3,6 +3,7 @@ const app = express();
 const mongoose = require('mongoose');
 const dotenv=require('dotenv');
 const cors=require('cors');
+const path = require("path");
 
 dotenv.config();
 //connect to db
@@ -24,6 +25,11 @@ app.use(cors());
 app.use('/api/users',authRoute);
 app.use('/api',formRoute);
 
+app.use(express.static(path.join(__dirname, "/client/build")));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
+});
 
 
 
